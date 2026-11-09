@@ -143,19 +143,19 @@
         }
     </style>
 </head>
-<body class="py-4 px-3 sm:py-6 sm:px-6">
+<body class="py-3 px-2.5 sm:py-6 sm:px-6">
 
     <!-- MAIN CONTAINER (Mobile-First Layout: Optimized for small screens) -->
-    <div class="w-full max-w-xl mx-auto space-y-4 sm:space-y-5">
+    <div class="w-full max-w-xl mx-auto space-y-3.5 sm:space-y-5">
 
         <!-- HEADER TOP BAR: Web Title & Admin Access -->
-        <div class="flex items-center justify-between text-[11px] sm:text-xs text-stone-500 font-cinzel tracking-widest px-1">
+        <div class="flex items-center justify-between text-[10px] sm:text-xs text-stone-500 font-cinzel tracking-widest px-1">
             <span>† INARICH STORE †</span>
             <span>Est. MMXXVI</span>
         </div>
 
         <!-- SECTION 1: Shop Header Card (Mobile Friendly Layout) -->
-        <div class="gothic-frame gothic-frame-dashed rounded-2xl p-3.5 sm:p-5 relative overflow-hidden">
+        <div class="gothic-frame gothic-frame-dashed rounded-2xl p-3 sm:p-5 relative overflow-hidden">
             <!-- Spider / Gothic Ornaments -->
             <div class="absolute top-2 left-2 text-stone-700 text-[10px] sm:text-xs">🕷</div>
             <div class="absolute top-2 right-2 text-stone-700 text-[10px] sm:text-xs">🕸</div>
@@ -164,8 +164,8 @@
                 <div class="flex items-center space-x-3 sm:space-x-4 w-full">
                     <!-- Gothic Logo Avatar -->
                     <div class="relative group shrink-0">
-                        <div class="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-stone-900 border border-stone-700 flex items-center justify-center shadow-inner relative overflow-hidden animate-gothic-float">
-                            <span class="text-stone-300 text-xl sm:text-3xl">☠</span>
+                        <div class="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-stone-900 border border-stone-700 flex items-center justify-center shadow-inner relative overflow-hidden animate-gothic-float">
+                            <span class="text-stone-300 text-lg sm:text-3xl">☠</span>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                         </div>
                         <span class="absolute -bottom-1 -right-1 bg-stone-900 text-stone-400 border border-stone-700 text-[9px] sm:text-[10px] px-1 py-0.5 rounded-full font-cinzel">✟</span>
@@ -174,7 +174,7 @@
                     <!-- Shop Details -->
                     <div class="min-w-0 flex-1">
                         <div class="flex items-center justify-between xs:justify-start space-x-2">
-                            <h1 class="text-lg sm:text-2xl font-bold font-cinzel text-stone-100 tracking-wider truncate">Inarich Store</h1>
+                            <h1 class="text-base sm:text-2xl font-bold font-cinzel text-stone-100 tracking-wider truncate">Inarich Store</h1>
                             <button onclick="toggleAdminModal(true)" class="xs:hidden gothic-btn-black text-[10px] px-2.5 py-1.5 rounded-lg flex items-center space-x-1 border border-stone-700 shrink-0">
                                 <i class="fa-solid fa-cross text-[10px] text-stone-400"></i>
                                 <span class="font-cinzel">แอดมิน</span>
@@ -183,7 +183,7 @@
                         <p id="shopDescriptionText" class="text-[11px] sm:text-xs text-stone-400 mt-0.5 font-light truncate">ร้านค้าสไตล์ Dark Gothic & Vintage Collection</p>
 
                         <!-- Badges / Tags -->
-                        <div class="flex flex-wrap gap-1 mt-2">
+                        <div class="flex flex-wrap gap-1 mt-1.5 sm:mt-2">
                             <span id="shopStatusBadge" class="inline-flex items-center text-[9px] sm:text-[10px] bg-stone-900 text-stone-300 border border-stone-800 px-2 py-0.5 rounded-full font-cinzel">
                                 <span class="w-1.5 h-1.5 rounded-full bg-stone-400 inline-block mr-1"></span>
                                 status: eternal dark open!
@@ -194,7 +194,7 @@
                         </div>
 
                         <!-- Contact Us Bar (Customer Front-end) -->
-                        <div class="flex items-center space-x-2 mt-2.5 pt-2 border-t border-stone-800/80">
+                        <div class="flex items-center space-x-2 mt-2 pt-2 border-t border-stone-800/80">
                             <span class="text-[10px] text-stone-500 font-cinzel tracking-wider">CONTACT:</span>
                             <div id="custContactContainer" class="flex flex-wrap items-center gap-1.5">
                                 <!-- Dynamic Contact Icons Rendered via JS -->
@@ -223,29 +223,29 @@
         </div>
 
         <!-- SECTION 3: Rating Summary Card (STANDALONE CARD 1) -->
-        <div class="gothic-frame gothic-frame-dashed rounded-2xl p-4 sm:p-5 relative overflow-hidden">
+        <div class="gothic-frame gothic-frame-dashed rounded-2xl p-3.5 sm:p-5 relative overflow-hidden">
             <!-- Gothic corner icons -->
             <span class="absolute top-2 left-2 text-[9px] sm:text-[10px] text-stone-700">✟</span>
             <span class="absolute top-2 right-2 text-[9px] sm:text-[10px] text-stone-700">☾</span>
             <span class="absolute bottom-2 left-2 text-[9px] sm:text-[10px] text-stone-700">🕷</span>
             <span class="absolute bottom-2 right-2 text-[9px] sm:text-[10px] text-stone-700">✟</span>
 
-            <!-- Content inside Card 1: Strictly Balanced Proportions -->
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <!-- Content inside Card 1: Mobile-friendly Responsive Proportions -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
                 
                 <!-- Left Block: Skull Icon + Rating Score & Stars -->
-                <div class="flex items-center space-x-3.5 sm:space-x-4 w-full sm:w-auto justify-start">
+                <div class="flex items-center space-x-3 w-full sm:w-auto justify-start">
                     <!-- Skull Icon -->
-                    <div class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-stone-900 border border-stone-700/80 flex items-center justify-center text-stone-200 shrink-0 shadow-inner">
-                        <i class="fa-solid fa-skull text-2xl sm:text-3xl"></i>
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-stone-900 border border-stone-700/80 flex items-center justify-center text-stone-200 shrink-0 shadow-inner">
+                        <i class="fa-solid fa-skull text-xl sm:text-3xl"></i>
                     </div>
 
                     <!-- Rating Score & Stars Stack -->
-                    <div class="flex flex-col space-y-1">
+                    <div class="flex flex-col space-y-0.5 sm:space-y-1">
                         <!-- Score Number & Out of 5.0 -->
-                        <div class="flex items-baseline space-x-2">
-                            <span id="avgRatingScore" class="text-3xl sm:text-4xl font-black font-cinzel text-stone-100 tracking-tight">4.8</span>
-                            <span class="text-xs text-stone-400 font-cinzel font-semibold">/ 5.0</span>
+                        <div class="flex items-baseline space-x-1.5 sm:space-x-2">
+                            <span id="avgRatingScore" class="text-2xl sm:text-4xl font-black font-cinzel text-stone-100 tracking-tight">4.8</span>
+                            <span class="text-[11px] sm:text-xs text-stone-400 font-cinzel font-semibold">/ 5.0</span>
                         </div>
 
                         <!-- Star Rating -->
@@ -259,19 +259,19 @@
                     </div>
                 </div>
 
-                <!-- Right Block: Total Reviews Badge & Write Review Button (Proportionally Balanced) -->
-                <div class="flex items-center space-x-2.5 w-full sm:w-auto justify-end pt-2 sm:pt-0 border-t sm:border-t-0 border-stone-800/80">
+                <!-- Right Block: Total Reviews Badge & Write Review Button -->
+                <div class="flex items-center space-x-2 w-full sm:w-auto justify-between sm:justify-end pt-2.5 sm:pt-0 border-t sm:border-t-0 border-stone-800/80">
                     <!-- Total Reviews Count Badge -->
-                    <div id="totalReviewsCount" class="text-[10px] sm:text-[11px] text-stone-300 font-cinzel font-semibold bg-stone-900/90 border border-stone-700/80 px-3 py-2.5 rounded-xl tracking-wider shadow-inner flex items-center space-x-1.5 shrink-0">
+                    <div id="totalReviewsCount" class="text-[10px] sm:text-[11px] text-stone-300 font-cinzel font-semibold bg-stone-900/90 border border-stone-700/80 px-2.5 sm:px-3 py-2 sm:py-2.5 rounded-xl tracking-wider shadow-inner flex items-center space-x-1 shrink-0">
                         <span class="text-stone-500">†</span>
                         <span>จาก <u class="text-stone-100 font-bold decoration-stone-500 underline-offset-2">3</u> รีวิวทั้งหมด</span>
                         <span class="text-stone-500">†</span>
                     </div>
 
                     <!-- Write Review Button -->
-                    <button onclick="toggleReviewModal(true)" class="gothic-btn-black group px-4 py-2.5 rounded-xl flex items-center justify-center space-x-2 text-xs font-cinzel border border-stone-600 active:scale-95 transition shadow-lg shrink-0">
+                    <button onclick="toggleReviewModal(true)" class="gothic-btn-black group px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl flex items-center justify-center space-x-1.5 sm:space-x-2 text-xs font-cinzel border border-stone-600 active:scale-95 transition shadow-lg shrink-0">
                         <span class="text-stone-500">†</span>
-                        <i class="fa-solid fa-feather-pointed text-stone-300 transition-transform group-hover:rotate-12"></i>
+                        <i class="fa-solid fa-feather-pointed text-stone-300 transition-transform group-hover:rotate-12 text-xs"></i>
                         <span class="font-bold tracking-wider text-stone-100">เขียนรีวิว</span>
                     </button>
                 </div>
@@ -280,16 +280,16 @@
         </div>
 
         <!-- SECTION 4: Customer Reviews List Card (STANDALONE CARD 2) -->
-        <div class="gothic-frame rounded-2xl p-4 sm:p-5 relative overflow-hidden">
-            <div class="flex items-center justify-between pb-3 mb-4 border-b border-stone-800">
+        <div class="gothic-frame rounded-2xl p-3.5 sm:p-5 relative overflow-hidden">
+            <div class="flex items-center justify-between pb-2.5 mb-3.5 border-b border-stone-800">
                 <h3 class="text-xs sm:text-sm font-bold font-cinzel text-stone-200 flex items-center space-x-2">
                     <span>† ความคิดเห็นจากลูกค้าทั้งหมด †</span>
                 </h3>
-                <span class="text-[10px] text-stone-500 font-cinzel">CUSTOMER FEEDBACK</span>
+                <span class="text-[9px] sm:text-[10px] text-stone-500 font-cinzel">CUSTOMER FEEDBACK</span>
             </div>
 
             <!-- Review Items List Container -->
-            <div id="publicReviewList" class="space-y-4">
+            <div id="publicReviewList" class="space-y-3 sm:space-y-4">
                 <!-- Dynamically rendered via JS -->
             </div>
         </div>
