@@ -222,7 +222,7 @@
             </div>
         </div>
 
-        <!-- SECTION 3: Rating Overview & WRITE REVIEW BUTTON (Mobile Responsive Card) -->
+        <!-- SECTION 3: Rating Summary Card (STANDALONE CARD 1) -->
         <div class="gothic-frame gothic-frame-dashed rounded-2xl p-4 sm:p-5 relative overflow-hidden">
             <!-- Gothic corner icons -->
             <span class="absolute top-2 left-2 text-[9px] sm:text-[10px] text-stone-700">✟</span>
@@ -230,40 +230,68 @@
             <span class="absolute bottom-2 left-2 text-[9px] sm:text-[10px] text-stone-700">🕷</span>
             <span class="absolute bottom-2 right-2 text-[9px] sm:text-[10px] text-stone-700">✟</span>
 
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-3.5">
-                <div class="flex items-center space-x-3 sm:space-x-4 w-full sm:w-auto">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-400 shrink-0">
-                        <i class="fa-solid fa-skull text-base sm:text-lg"></i>
+            <!-- Content inside Card 1: Strictly Balanced Proportions -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                
+                <!-- Left Block: Skull Icon + Rating Score & Stars -->
+                <div class="flex items-center space-x-3.5 sm:space-x-4 w-full sm:w-auto justify-start">
+                    <!-- Skull Icon -->
+                    <div class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-stone-900 border border-stone-700/80 flex items-center justify-center text-stone-200 shrink-0 shadow-inner">
+                        <i class="fa-solid fa-skull text-2xl sm:text-3xl"></i>
                     </div>
-                    <div>
-                        <div class="flex items-baseline space-x-1.5">
-                            <span id="avgRatingScore" class="text-2xl sm:text-3xl font-bold font-cinzel text-stone-100">4.8</span>
-                            <span class="text-[10px] sm:text-xs text-stone-500 font-cinzel">/ 5.0</span>
+
+                    <!-- Rating Score & Stars Stack -->
+                    <div class="flex flex-col space-y-1">
+                        <!-- Score Number & Out of 5.0 -->
+                        <div class="flex items-baseline space-x-2">
+                            <span id="avgRatingScore" class="text-3xl sm:text-4xl font-black font-cinzel text-stone-100 tracking-tight">4.8</span>
+                            <span class="text-xs text-stone-400 font-cinzel font-semibold">/ 5.0</span>
                         </div>
-                        <div id="avgStars" class="flex items-center space-x-1 text-stone-300 text-xs my-0.5">
+
+                        <!-- Star Rating -->
+                        <div id="avgStars" class="flex items-center space-x-1 text-stone-200 text-xs sm:text-sm">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
-                        <p id="totalReviewsCount" class="text-[10px] sm:text-[11px] text-stone-500 font-cinzel tracking-wide">จาก 3 รีวิวทั้งหมด</p>
                     </div>
                 </div>
 
-                <!-- WRITE REVIEW BUTTON (Full width touch target on mobile) -->
-                <button onclick="toggleReviewModal(true)" class="gothic-btn-black group w-full sm:w-auto px-5 py-2.5 sm:py-2.5 rounded-xl flex items-center justify-center space-x-2 text-xs font-cinzel border border-stone-700 active:scale-95 transition">
-                    <span class="text-stone-500">†</span>
-                    <i class="fa-solid fa-feather-pointed text-stone-400 transition-transform group-hover:rotate-12"></i>
-                    <span class="font-bold tracking-wider">เขียนรีวิว</span>
-                    <span class="text-stone-500">✦</span>
-                </button>
+                <!-- Right Block: Total Reviews Badge & Write Review Button (Proportionally Balanced) -->
+                <div class="flex items-center space-x-2.5 w-full sm:w-auto justify-end pt-2 sm:pt-0 border-t sm:border-t-0 border-stone-800/80">
+                    <!-- Total Reviews Count Badge -->
+                    <div id="totalReviewsCount" class="text-[10px] sm:text-[11px] text-stone-300 font-cinzel font-semibold bg-stone-900/90 border border-stone-700/80 px-3 py-2.5 rounded-xl tracking-wider shadow-inner flex items-center space-x-1.5 shrink-0">
+                        <span class="text-stone-500">†</span>
+                        <span>จาก <u class="text-stone-100 font-bold decoration-stone-500 underline-offset-2">3</u> รีวิวทั้งหมด</span>
+                        <span class="text-stone-500">†</span>
+                    </div>
+
+                    <!-- Write Review Button -->
+                    <button onclick="toggleReviewModal(true)" class="gothic-btn-black group px-4 py-2.5 rounded-xl flex items-center justify-center space-x-2 text-xs font-cinzel border border-stone-600 active:scale-95 transition shadow-lg shrink-0">
+                        <span class="text-stone-500">†</span>
+                        <i class="fa-solid fa-feather-pointed text-stone-300 transition-transform group-hover:rotate-12"></i>
+                        <span class="font-bold tracking-wider text-stone-100">เขียนรีวิว</span>
+                    </button>
+                </div>
+
             </div>
         </div>
 
-        <!-- SECTION 4: Public Reviews List -->
-        <div id="publicReviewList" class="space-y-3 sm:space-y-4">
-            <!-- Dynamically rendered via JS -->
+        <!-- SECTION 4: Customer Reviews List Card (STANDALONE CARD 2) -->
+        <div class="gothic-frame rounded-2xl p-4 sm:p-5 relative overflow-hidden">
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-stone-800">
+                <h3 class="text-xs sm:text-sm font-bold font-cinzel text-stone-200 flex items-center space-x-2">
+                    <span>† ความคิดเห็นจากลูกค้าทั้งหมด †</span>
+                </h3>
+                <span class="text-[10px] text-stone-500 font-cinzel">CUSTOMER FEEDBACK</span>
+            </div>
+
+            <!-- Review Items List Container -->
+            <div id="publicReviewList" class="space-y-4">
+                <!-- Dynamically rendered via JS -->
+            </div>
         </div>
 
     </div>
@@ -792,23 +820,28 @@
 
             if (visibleReviews.length === 0) {
                 listContainer.innerHTML = `
-                    <div class="gothic-frame rounded-2xl p-8 text-center text-stone-500 text-xs font-cinzel">
+                    <div class="p-8 text-center text-stone-500 text-xs font-cinzel">
                         † ยังไม่มีรีวิวในขณะนี้ †
                     </div>
                 `;
                 return;
             }
 
-            listContainer.innerHTML = visibleReviews.map(r => `
-                <div class="gothic-frame rounded-2xl p-5 relative group transition hover:border-stone-700">
+            listContainer.innerHTML = visibleReviews.map((r, index) => `
+                <div class="bg-stone-900/60 border border-stone-800/90 rounded-xl p-4 hover:border-stone-700 transition duration-200">
                     <div class="flex items-center justify-between mb-2">
-                        <span class="font-bold text-sm text-stone-200">${escapeHtml(r.name)}</span>
-                        <span class="text-[11px] text-stone-500 font-cinzel">${r.date}</span>
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-stone-800 text-stone-400 text-[10px] flex items-center justify-center font-cinzel">†</span>
+                            <span class="font-bold text-xs sm:text-sm text-stone-200">${escapeHtml(r.name)}</span>
+                        </div>
+                        <span class="text-[10px] sm:text-[11px] text-stone-500 font-cinzel">${r.date}</span>
                     </div>
-                    <div class="flex items-center space-x-1 text-stone-300 text-xs mb-2">
+                    <div class="flex items-center space-x-1 text-stone-300 text-[11px] mb-2 pl-8">
                         ${generateStarsHtml(r.rating)}
                     </div>
-                    <p class="text-sm text-stone-300 font-light leading-relaxed">${escapeHtml(r.content)}</p>
+                    <div class="pl-8 text-xs sm:text-sm text-stone-300 font-light leading-relaxed bg-stone-950/40 p-3 rounded-lg border border-stone-800/40">
+                        ${escapeHtml(r.content)}
+                    </div>
                 </div>
             `).join('');
         }
@@ -948,7 +981,11 @@
             const approved = reviews.filter(r => r.status === 'approved');
             const totalCount = approved.length;
 
-            document.getElementById('totalReviewsCount').innerText = `จาก ${totalCount} รีวิวทั้งหมด`;
+            document.getElementById('totalReviewsCount').innerHTML = `
+                <span class="text-stone-500 text-[10px]">✟</span>
+                <span>จาก <strong class="text-stone-100 font-bold underline decoration-stone-600 underline-offset-4">${totalCount}</strong> รีวิวทั้งหมด</span>
+                <span class="text-stone-500 text-[10px]">✟</span>
+            `;
 
             if (totalCount === 0) {
                 document.getElementById('avgRatingScore').innerText = '0.0';
